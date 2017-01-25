@@ -51,8 +51,6 @@ public class Quicksort {
         
         if (left < j ) qs(items, left, j);
         
-        if (i < right) qs(items, i, right);
-    
-    
+        if (i < right) qs(items, i, right); 
     }
 }
