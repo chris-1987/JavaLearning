@@ -123,7 +123,7 @@ class TrafficLightSimulator implements Runnable {
         stop = true;
     }
 }
-
+    
 public class TrafficLightDemo {
 
 }
