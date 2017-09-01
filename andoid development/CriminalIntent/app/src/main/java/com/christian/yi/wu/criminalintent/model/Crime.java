@@ -15,10 +15,16 @@ public class Crime {
     private boolean mSolved;
     private boolean mRequirePolice;
 
-    public Crime() {
-        mId = UUID.randomUUID();
-        mDate = new Date();  // now() in default
+    public Crime(UUID id) {
+        mId = id;
+        mDate = new Date();
+        mRequirePolice = false;
     }
+
+    public Crime() {
+        this(UUID.randomUUID());
+    }
+
 
     public Date getDate() {
         return mDate;
@@ -61,5 +67,16 @@ public class Crime {
 
     public void setRequirePolice(boolean requirePolice) {
         mRequirePolice = requirePolice;
+    }
+
+    @Override
+    public String toString() {
+        return "Crime{" +
+                "mDate=" + mDate +
+                ", mId=" + mId +
+                ", mTitle='" + mTitle + '\'' +
+                ", mSolved=" + mSolved +
+                ", mRequirePolice=" + mRequirePolice +
+                '}';
     }
 }

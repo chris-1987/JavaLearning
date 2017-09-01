@@ -2,7 +2,6 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:layout_margin="16dp"
               android:orientation="vertical"
               tools:context=".controller.CrimeFragment">
 
@@ -10,13 +9,13 @@
         style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "@string/crime_title_label"/>
+        android:text="@string/crime_title_label"/>
 
     <EditText
-        android:id ="@+id/crime_title"
+        android:id="@+id/crime_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "@string/crime_title_hint"/>
+        android:hint="@string/crime_title_hint"/>
 
     <TextView
         style="?android:listSeparatorTextViewStyle"
@@ -28,9 +27,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:id="@+id/crime_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <CheckBox
         android:id="@+id/crime_solved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text = "@string/crime_solved_label"/>
+        android:text="@string/crime_solved_label"/>
 </LinearLayout>
