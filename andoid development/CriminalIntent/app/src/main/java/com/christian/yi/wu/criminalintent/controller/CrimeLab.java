@@ -10,6 +10,7 @@ import com.christian.yi.wu.criminalintent.db.controller.CrimeCursorWrapper;
 import com.christian.yi.wu.criminalintent.db.model.CrimeDbSchema;
 import com.christian.yi.wu.criminalintent.model.Crime;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -118,6 +119,7 @@ public class CrimeLab {
         values.put(CrimeDbSchema.CrimeTable.Cols.TITLE, crime.getTitle());
         values.put(CrimeDbSchema.CrimeTable.Cols.DATE, crime.getDate().getTime());
         values.put(CrimeDbSchema.CrimeTable.Cols.SOLVED, crime.isSolved() ? 1 : 0);
+        values.put(CrimeDbSchema.CrimeTable.Cols.SUSPECT, crime.getSuspect());
 
         return values;
     }
@@ -128,4 +130,8 @@ public class CrimeLab {
         return new CrimeCursorWrapper(cursor);
     }
 
+    public File getPhotoFile(Crime crime) {
+        File filesDir = mContext.getFilesDir();
+        return new File(filesDir, crime.getPhotoFilename());
+    }
 }
