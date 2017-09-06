@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RingtonePreference
+        android:ringtoneType="all"
+        android:title="ring sound setting"
+        android:summary = "choose ring sound"
+        android:showDefault = "true"
+        android:key = "ring_key"
+        android:showSilent = "true">
+
+    </RingtonePreference>
+
+    <PreferenceCategory android:title = "individual information setting group">
+        <EditTextPreference
+            android:key="name"
+            android:title = "fill in username"
+            android:summary = "fill in your username"
+            android:dialogTitle="current uersname in use is: "/>
+        <ListPreference
+            android:key = "gender"
+            android:title = "sex"
+            android:summary="choose you gender"
+            android:dialogTitle = "ListPreference"
+            android:entries = "@array/gender_name_list"
+            android:entryValues="@array/gender_value_list"
+    </PreferenceCategory>
+    <PreferenceCategory android:title = "system function setting group">
+        <CheckBoxPreference
+            android:key="autoSave"
+            android:title="save automatically"
+            android:summaryOn = "autosave:open"
+            android:summaryOff="autosave:closed"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>

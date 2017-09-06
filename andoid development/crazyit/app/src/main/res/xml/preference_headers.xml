@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="com.christian.yi.wu.crazyit.customview.PreferenceTestActivity$Prefs1Fragment"
+        android:summary="options for application"
+        android:title="program design setting"
+        />
+
+    <header
+        android:fragment="com.christian.yi.wu.crazyit.customview.PreferenceTestActivity$Prefs2Fragment"
+        android:summary="options for display"
+        android:title="display design setting">
+
+        <extra
+            android:name="website"
+            android:value="wu.yi.christian.com"/>
+    </header>
+
+    <header
+        android:summary="use intent to launch an activity"
+        android:title="use intent">
+        <intent
+            android:action="android.intent.action.View"
+            android:data="http://wu.yi.christian.com"/>
+    </header>
+</preference-headers>
