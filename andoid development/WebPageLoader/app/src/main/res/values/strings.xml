@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WebPageLoader</string>
+    <string name="hello">Hello</string>
+    <string name="open_url">Open Url</string>
+</resources>
